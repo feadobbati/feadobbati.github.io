@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Academic Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600" />
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+  <link rel="stylesheet" href="page/style.css" />
+</head>
+<body>
+
+  <!-- ===== Left Column ===== -->
+  <header id="sidebar">
+    <div class="sidebar-bg">
+      <img id="sidebar-bg" src="data/bkg.png" alt="" />
+    </div>
+
+    <!-- Top: photo + name + position -->
+    <div class="sidebar-inner">
+      <span class="avatar"><img id="profile-photo" src="data/pp.png" alt="Profile Photo" /></span>
+      <div class="sidebar-text">
+        <h1 id="profile-name">First Name LAST NAME</h1>
+        <p id="profile-position">PhD Student at University Name</p>
+      </div>
+    </div>
+
+    <!-- Bottom: social icons + copyright -->
+    <div class="sidebar-footer">
+      <ul class="social-links">
+        <li>
+          <a id="link-github" href="#" title="GitHub">
+            <i class="fab fa-github"></i>
+            <span class="label">GitHub</span>
+          </a>
+        </li>
+        <li>
+          <a id="link-linkedin" href="#" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+            <span class="label">LinkedIn</span>
+          </a>
+        </li>
+        <li>
+          <a id="link-orcid" href="#" title="ORCID">
+            <i class="fab fa-orcid"></i>
+            <span class="label">ORCID</span>
+          </a>
+        </li>
+        <li>
+          <a id="link-scholar" href="#" title="Google Scholar">
+            <i class="fas fa-graduation-cap"></i>
+            <span class="label">Google Scholar</span>
+          </a>
+        </li>
+        <li>
+          <a id="link-email" href="#" title="Email">
+            <i class="fas fa-envelope"></i>
+            <span class="label">Email</span>
+          </a>
+        </li>
+      </ul>
+      <p id="copyright"></p>
+    </div>
+  </header>
+
+  <!-- ===== Right Column ===== -->
+  <div id="main">
+
+    <section id="about">
+      <p id="bio"></p>
+      <p class="cv-line">
+        <a id="cv-link" href="data/cv.pdf" target="_blank" rel="noopener noreferrer">Academic CV</a>
+        <span id="cv-modified"></span>
+      </p>
+    </section>
+
+    <section id="publications">
+    </section>
+
+  </div>
+
+  <script src="page/script.js"></script>
+</body>
+</html>
