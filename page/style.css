@@ -1,0 +1,365 @@
+/* ===== Accent color — set default here, overridden at runtime by data/color.json ===== */
+:root {
+  --accent: #e49d43;
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  font-size: 16pt;
+  font-weight: 400;
+  line-height: 1.75em;
+  color: #a2a2a2;
+  background: #f5f5f5;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Sidebar (Left Column) ===== */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 100%;
+  background-color: #5b524a;
+  overflow: hidden;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 6em 3.5em;
+  text-align: right;
+}
+
+.sidebar-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.sidebar-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  filter: grayscale(0%) brightness(1.05);
+}
+
+/* Top block: avatar + name + position */
+.sidebar-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.avatar {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.avatar img {
+  width: 8em;
+  height: 8em;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#profile-name {
+  font-size: 1.6em;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5em;
+  margin: 0;
+}
+
+#profile-position {
+  font-size: 0.85em;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.5em;
+  margin: 0;
+}
+
+/* Bottom block: social icons + copyright */
+.sidebar-footer {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75em;
+  flex-wrap: wrap;
+}
+
+.social-links li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4em;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.2s ease;
+}
+
+.social-links li a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.social-links .label {
+  display: none;
+}
+
+#copyright {
+  margin-top: 0.75em;
+  font-size: 0.65em;
+  color: rgba(255, 255, 255, 0.72);
+  text-align: right;
+}
+
+/* ===== Main Content (Right Column) ===== */
+#main {
+  margin-left: 35%;
+  min-height: 100%;
+  background: #fff;
+  padding: 3.5em 3.5em 4em;
+}
+
+/* ===== About Section ===== */
+#about {
+  padding-top: 1.5em;
+  margin-bottom: 3em;
+  padding-bottom: 2.5em;
+  border-bottom: 1px solid #eee;
+}
+
+#bio {
+  font-size: 0.9em;
+  line-height: 1.9em;
+  color: #666;
+  text-align: justify;
+  margin-bottom: 1.25em;
+}
+
+.cv-line {
+  font-size: 0.85em;
+  color: #888;
+}
+
+.cv-line #cv-modified {
+  color: #aaa;
+  margin-left: 0.25em;
+}
+
+/* ===== Publications Section ===== */
+.pub-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid #eee;
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  padding: 1.5em 1.75em 1.25em;
+  margin-bottom: 1.25em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+}
+
+.pub-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+}
+
+.pub-number {
+  position: absolute;
+  top: 1em;
+  right: 1.25em;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: #ccc;
+  letter-spacing: 0.05em;
+}
+
+.pub-title {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #444;
+  line-height: 1.4em;
+  margin-bottom: 0.35em;
+  padding-right: 2.5em;
+}
+
+.pub-authors {
+  font-size: 0.75em;
+  color: #888;
+  margin-bottom: 0.2em;
+}
+
+.pub-venue {
+  font-size: 0.75em;
+  color: #aaa;
+  font-style: italic;
+  margin-bottom: 1em;
+}
+
+.pub-buttons {
+  display: flex;
+  gap: 0.6em;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 0.7em;
+  font-weight: 600;
+  padding: 0.35em 0.9em;
+  border-radius: 4px;
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ===== Responsive ===== */
+
+/* Tablet: horizontal top banner */
+@media (max-width: 980px) {
+  #sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em 3em;
+    text-align: left;
+  }
+
+  .sidebar-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.25em;
+  }
+
+  .avatar {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .avatar img {
+    width: 4.5em;
+    height: 4.5em;
+  }
+
+  .sidebar-footer {
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .social-links {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.25em;
+  }
+
+  #main {
+    margin-left: 0;
+    padding: 2.5em 1.75em 3em;
+  }
+}
+
+/* iPhone: photo left, name/title right, icons bottom-right */
+@media (max-width: 600px) {
+  body {
+    font-size: 13pt;
+  }
+
+  #sidebar {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+    padding: 1.5em;
+    min-height: 185px;
+  }
+
+  .sidebar-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .avatar {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .avatar img {
+    width: 4.25em;
+    height: 4.25em;
+  }
+
+  .sidebar-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #profile-name {
+    font-size: 1.15em;
+  }
+
+  .sidebar-footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .social-links {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.1em;
+  }
+
+  #copyright {
+    display: none;
+  }
+
+  #main {
+    padding: 2em 1.25em 2.5em;
+  }
+}

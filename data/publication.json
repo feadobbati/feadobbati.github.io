@@ -1,0 +1,23 @@
+[
+  {
+    "title"     : "A deep learning approach for coastal downscaling: The northern Adriatic Sea case-study",
+    "authors"   : "Federica Adobbati, Lorenzo Bonin, Gianpiero Cossarini, Valeria Di Biagio, Fabio Giordano, Luca Manzoni, Stefano Querin",
+    "venue"     : "Ocean Modelling (2025)",
+    "paper_url" : "https://www.sciencedirect.com/science/article/pii/S1463500325000848",
+    "github_url": "https://github.com/feadobbati/SR_Unet"
+  },
+  {
+    "title"     : "Asynchronous Multi-Agent Systems with Petri nets",
+    "authors"   : "Federica Adobbati, Łukasz Mikulski",
+    "venue"     : "arXiv (2025)",
+    "paper_url" : "https://arxiv.org/abs/2504.00602",
+    "github_url": ""
+  },
+  {
+    "title"     : "A Finite Prefix for Analyzing Information Flow Among Transitions of a Free-Choice Net",
+    "authors"   : "Federica Adobbati, Gorkem Kilinc Soylu, Adrian Puerto Aubel",
+    "venue"     : "IEEE Access (2022)",
+    "paper_url" : "https://doi.org/10.1109/ACCESS.2022.3165185",
+    "github_url": ""
+  }
+]

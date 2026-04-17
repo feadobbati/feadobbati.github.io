@@ -1,0 +1,12 @@
+{
+  "first_name"       : "Federica",
+  "last_name"        : "Adobbati",
+  "position"         : "Postdoc at the University of Liège",
+  "bio"              : "I am Federica, a postdoctoral researcher at the University of Liège. My research focuses on applying deep learning methods to better understand\nand reconstruct ocean biogeochemical properties.\nIn my current project, I am working on reconstructing dissolved oxygen in the global ocean using generative neural networks, under the supervision of Marilaure Grégoire and Gilles Louppe (heads of the MAST and SAIL research groups).\nPreviously, at OGS, I worked on improving the resolution of ocean data in the Northern Adriatic Sea, a marginal region of the Mediterranean Sea, using U-Net models.\nI am particularly interested in combining physical and biogeochemical knowledge with data-driven approaches to better capture and understand ocean processes.",
+  "github"           : "https://github.com/feadobbati",
+  "linkedin"         : "https://www.linkedin.com/in/federica-adobbati-a09561261",
+  "orcid"            : "https://orcid.org/0000-0002-6356-7026",
+  "scholar"          : "https://scholar.google.com/citations?user=BqJNh-oAAAAJ&hl",
+  "email"            : "mailto:fadobbati@uliege.be",
+  "cv_last_modified" : "Aprile 2026"
+}
